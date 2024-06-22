@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Insight</title>
-    <style>
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #f2f2f2;
-        }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .buttons {
-            display: flex;
-        }
-
-        .button {
-            margin-left: 10px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="logo">Insight</div>
-        <div class="buttons">
-            <button class="button">Button 1</button>
-            <button class="button">Button 2</button>
-            <button class="button">Button 3</button>
-            <button class="button">Button 4</button>
+    <head>
+        <link rel="stylesheet" href="styleinicio.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/125133b4cf.js" crossorigin="anonymous"></script>
+        <title>
+            Página de inicio
+        </title>
+    </head>
+    <body>
+        <div class="contenedor">
+            <button id="miBoton" onclick="abrirEnPantallaCompleta(), mostrarImagen()" class="buttonPrimary">Ingresar al sistema</button>
+            <img id="miImagen" src="https://i.makeagif.com/media/7-01-2018/GwYIge.gif" style="display: none; width="100%">
+            <audio id="miAudio" src="https://us-tuna-sounds-files.voicemod.net/816ed737-20b6-4e8c-b24a-b3d29549d46b-1693415650389.mp3" loop></audio>
         </div>
-    </div>
-</body>
+
+    <script>
+        function abrirEnPantallaCompleta() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) { /* Firefox */
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { /* IE/Edge */
+                document.documentElement.msRequestFullscreen();
+            }
+        }
+        function mostrarImagen() {
+            var imagen = document.getElementById("miImagen");
+            imagen.style.display = "block";
+            var boton = document.getElementById("miBoton");
+            boton.style.display = "none";
+            var audio = document.getElementById("miAudio");
+            audio.play();
+            document.body.classList.add("arcoiris");
+        }
+        </script>
+    </body>
 </html>

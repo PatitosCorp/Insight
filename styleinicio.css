@@ -1,0 +1,36 @@
+body {
+    background-color: #FFECF3;
+}
+
+.buttonPrimary{
+    display: flex;
+    min-height: 36px;
+    padding: 8px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #FF669A;
+    border: 0px;
+    color: #FFF8FB;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta esto según tus necesidades */
+}
+
+@keyframes arcoiris {
+    0% {background: #FFFFFF;}
+    50% {background: #000000;}
+    100% {background: #FFFFFF;}
+}
+
+body.arcoiris {
+    animation-name: arcoiris;
+    animation-duration: 0.1s; /* Puedes cambiar este valor para ajustar la velocidad */
+    animation-iteration-count: infinite;
+}
